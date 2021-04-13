@@ -12,5 +12,5 @@ services:
       # - '22:22'
     container_name: nexus
     volumes:
-      - ~/srv/nexus:/nexus-data sonatype/nexus3
+      - ~/srv/nexus:/nexus-data 
 
