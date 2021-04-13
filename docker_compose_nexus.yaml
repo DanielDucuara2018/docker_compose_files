@@ -1,0 +1,16 @@
+version: '3'
+services:
+   nexus:
+    image: 'sonatype/nexus3'
+    restart: always
+    # privileged: true
+    # user: root
+    # hostname: 'nexus.example.com'
+    ports:
+      - '8081:8081'
+      # - '443:443'
+      # - '22:22'
+    container_name: nexus
+    volumes:
+      - ~/srv/nexus:/nexus-data sonatype/nexus3
+

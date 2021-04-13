@@ -1,0 +1,27 @@
+# mkdir ~/jenkins
+version: '3'
+services:
+  jenkins:
+    image: jenkins/jenkins:lts
+    # restart: always
+    privileged: true
+    user: root
+    # hostname: 'jenkins.example.com'
+    ports:
+      - 8082:8080
+      - 50000:50000
+    #  - 443:443
+    container_name: jenkins
+    volumes:
+      - ~/srv/jenkins/var:/var/jenkins_home
+      
+#      - ~/jenkins/usr:/usr
+#    command: sh -c "apt-get update && apt-get install -y maven && apt install -y openjdk-8-jdk"
+
+# apt-get update && apt-get install -y maven
+# apt install openjdk-8-jdk
+#
+
+
+
+
